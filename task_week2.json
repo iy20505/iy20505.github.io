@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/task2_excel.csv",
+       "format": {
+           "type":"csv",
+           "property": "Year"}},
+
+
+    "title": {
+        "text": "Unemployment level (16+)",
+        "subtitle": "United Kingdom (thousands) seasonally adjusted",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+
+    "width":300,
+    "height":300,
+
+    "mark":{
+        "type": "bar",
+        "color":"seagreen",
+        "strokeWidth":2,
+        "opacity":1},
+ 
+
+    "encoding": {
+      "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title":null},
+      "y": {
+          "field": "Totals",
+
+          "type": "quantitative",
+          "title":null}
+    }
+}
