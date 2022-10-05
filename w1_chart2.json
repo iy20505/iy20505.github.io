@@ -1,46 +1,83 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "title": {
-    "text": "Cases: UK nations",
-    "subtitle":"New cases by publish date, rolling rate",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":10,
-    "anchor": "start",
-    "color": "black"},
 
-  
+ "title": {
+  "text": "Ether: Price vs volume",
+  "subtitle":"Daily ETH price and volume traded",
+  "subtitleFontStyle":"italic",
+  "subtitleFontSize":10,
+  "anchor": "start"},
+
+  "width":260,
+  "height":300,
+
+
   "data": {
-    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=nation&metric=newCasesBySpecimenDateRollingRate&format=csv",
-    "format": {"type": "csv"}
-  },
- 
-  "height": 300,
-  "width": 300,
- 
-  "mark": {"type": "line", "point": false},
-  
-  "encoding": {
-    
-    "x": {
-      "field": "date",
-      "type": "temporal",
-      "title": null,
-      "axis": {"grid": false}},
- 
-    "y": {
-      "field": "newCasesBySpecimenDateRollingRate",
-      "type": "quantitative",
-      "title": null,
-      "axis": {"grid": false}},
+    "name":"myData",
+    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/crypto/dataETH.csv"},
 
-    "color": {
-      "field": "areaName",
-      "type": "nominal",
-      "scale": {"scheme": "set1"},
-      "title": null,
-      "legend": {"orient": "top-left"}
- 
-   }
-}
+
+  "encoding": {     
+      "x": {
+        "field": "Date",
+        "title":null,
+        "type": "temporal"}
+        },
+          
+   "layer":[
+
+      {"mark": {
+          "type": "line",
+          "point": false,
+          "strokeWidth":1,
+          "width":1
+        },
+
+      "encoding": {
+          "y": {
+          "field": "Volume",
+          "type": "quantitative",
+          "title": "",
+          "axis": {
+            "grid": false,            
+            "labelColor":"red",
+            "format":",.5"}
+            },
+            
+          "color": {
+            "datum": "Volume",
+            "scale": {"range": ["blue", "red"]},
+            "legend":{
+              "orient": "top-left"}}}
+      },
+
+     {"mark": {
+          "type": "line",
+          "point": false,
+          "strokeWidth":1
+        },
+
+      "encoding": {
+          "y": {
+          "field": "Price",
+          "type": "quantitative",
+          "title": "",
+          "axis": {
+            "grid": false,
+            "labelColor":"blue",
+            "format":"$,.5"}
+            },
+            
+          "color": {
+            "datum": "Price",
+            "scale": {"range": ["orange", "hotpink"]},
+            "legend":{
+              "orient": "top-left"}}
+        
+        } 
+    }
+],
+
+    "resolve": {"scale": {"y": "independent"}} 
 }
