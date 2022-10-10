@@ -8,7 +8,7 @@
       "anchor": "start",
       "color": "black"},
   
-  "data":{"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/w2_excel2.csv"},
+  "data":{"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week2/w2_excel2.csv"},
 
   "transform": [
     {"calculate": "datum.Totals/1000000000", "as": "billions"}
