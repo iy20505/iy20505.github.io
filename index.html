@@ -1,73 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Title for the page -->
     <title>Document</title>
-
-    <!-- Link to my style sheet -->
-    <link rel="stylesheet" href="index.css">
-
-    <!--The next three lines allow the Vega embed-->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 </head>
-
-
-
+<link rel="stylesheet" href="indexCSS_exampleWk2.css">
 <body>
-    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
-    <div class="myWeek1">
-        <h1>Data Science 2022</h1>
-
-        <h3>By Alex Hall</h3>
-        
-        <h3>Week 1</h3> 
-        <p>Tasks - Embed two charts from the rapidcharts repository.</p>
-            
-        
-        <h3>CO2 emissions from food.</h3>
-        <p>Kg of CO2 emitted per kg of food.</p>
-        <div class= "chart" id="Chart1"></div>
-
-        <h3>Ethererum (ETH): Price vs volume.</h3>
-        <p>Daily ETH price and volume traded.</p>
-        <div class="chart" id="Chart2"> </div>
     
-        <h3>Week 2</h3>
-        <p>Tasks - A chart showing IMF lending (like the one used by the FT), then one improving on it.</p>       
-        <h3>IMF lending at an all-time high?</h3>
-        <p>IMF lending to economically troubled countries between 1984 and 2022.</p>
-        <div class="chart" id="Chart3"> </div>
-        
-        <h3>IMF Lending relative to GDP.</h3>
-       <p>The graph represents IMF lending as a proportion of US GDP and so shows relative size of debt over time. If debt is constant but GDP is rising, the debt will be easier to pay back.</p>
-            <div class="chart" id="Chart4"></div>
-<p>In nominal terms, 2022 is the year with the highest amount of IMF lending. However, once scaled for GDP, we see 1984 had the highest burden of debt.</p>
-        
-  
-    </div> 
+<h1>This is my Data Science web site</h1>   
+<p>All about charts, numbers and data stories</p> 
+
+<a href="portfolio.html">Portfolio</a>
+<a href="project.html">Link to my project</a>
+<a href="about.html">About me</a>
+<a href="cv.html">CV</a>
+
+
 </body>
-
-
-<script>
-    //Define charts:
-    var myChart1 = "week1/w1_chart1.json";
-    var myChart2 = "week1/w1_chart2.json";
-    var myChart3 = "week2/w2_IMFtask.json";
-    var myChart4 = "week2/w2_IMFtask2.json";
-
-    // Embed charts:
-    vegaEmbed('#Chart1', myChart1);
-    vegaEmbed('#Chart2', myChart2);
-    vegaEmbed('#Chart3', myChart3);
-    vegaEmbed('#Chart4', myChart4);
-</script>
-
 </html>
