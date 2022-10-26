@@ -3,16 +3,17 @@
 /* FONTS: */
 
 h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Microsoft JhengHei', sans-serif;
+    font-size: large;
     background-color: black;
-    color: turquoise
+    color: white
 }
 
 p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
+    font-family: 'Microsoft JhengHei', sans-serif;
+    font-size: normal;
     font-variant: normal;
-    color:turquoise;
+    color:white;
     background-color: black;
 }
 
@@ -33,9 +34,12 @@ body{
 /* BUTTONS */
 
 a{
+    font-family: 'Microsoft JhengHei', sans-serif;
+    color: turquoise;
     border: 3px;
     border-color: black;
     border-style: solid;
+
 
     margin:20px
 }
