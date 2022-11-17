@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values":
+
+   [{"LOCATION": "AUS", "SUBJECT": "BEEF", "Value": 19.438}, {"LOCATION": "AUS", "SUBJECT": "PIG", "Value": 20.212}, {"LOCATION": "AUS", "SUBJECT": "POULTRY", "Value": 43.792}, {"LOCATION": "AUS", "SUBJECT": "SHEEP", "Value": 5.874}, {"LOCATION": "CAN", "SUBJECT": "BEEF", "Value": 17.578}, {"LOCATION": "CAN", "SUBJECT": "PIG", "Value": 15.881}, {"LOCATION": "CAN", "SUBJECT": "POULTRY", "Value": 35.527}, {"LOCATION": "CAN", "SUBJECT": "SHEEP", "Value": 0.974}, {"LOCATION": "JPN", "SUBJECT": "BEEF", "Value": 7.643}, {"LOCATION": "JPN", "SUBJECT": "PIG", "Value": 16.13}, {"LOCATION": "JPN", "SUBJECT": "POULTRY", "Value": 17.734}, {"LOCATION": "JPN", "SUBJECT": "SHEEP", "Value": 0.16}, {"LOCATION": "KOR", "SUBJECT": "BEEF", "Value": 11.85}, {"LOCATION": "KOR", "SUBJECT": "PIG", "Value": 31.565}, {"LOCATION": "KOR", "SUBJECT": "POULTRY", "Value": 18.742}, {"LOCATION": "KOR", "SUBJECT": "SHEEP", "Value": 0.332}, {"LOCATION": "MEX", "SUBJECT": "BEEF", "Value": 8.971}, {"LOCATION": "MEX", "SUBJECT": "PIG", "Value": 14.42}, {"LOCATION": "MEX", "SUBJECT": "POULTRY", "Value": 30.586}, {"LOCATION": "MEX", "SUBJECT": "SHEEP", "Value": 0.544}, {"LOCATION": "NZL", "SUBJECT": "BEEF", "Value": 11.548}, {"LOCATION": "NZL", "SUBJECT": "PIG", "Value": 19.063}, {"LOCATION": "NZL", "SUBJECT": "POULTRY", "Value": 40.079}, {"LOCATION": "NZL", "SUBJECT": "SHEEP", "Value": 3.446}, {"LOCATION": "TUR", "SUBJECT": "BEEF", "Value": 9.633}, {"LOCATION": "TUR", "SUBJECT": "PIG", "Value": 0.0}, {"LOCATION": "TUR", "SUBJECT": "POULTRY", "Value": 19.183}, {"LOCATION": "TUR", "SUBJECT": "SHEEP", "Value": 4.231}, {"LOCATION": "USA", "SUBJECT": "BEEF", "Value": 26.195}, {"LOCATION": "USA", "SUBJECT": "PIG", "Value": 23.983}, {"LOCATION": "USA", "SUBJECT": "POULTRY", "Value": 50.963}, {"LOCATION": "USA", "SUBJECT": "SHEEP", "Value": 0.431}, {"LOCATION": "ARG", "SUBJECT": "BEEF", "Value": 36.894}, {"LOCATION": "ARG", "SUBJECT": "PIG", "Value": 11.476}, {"LOCATION": "ARG", "SUBJECT": "POULTRY", "Value": 38.088}, {"LOCATION": "ARG", "SUBJECT": "SHEEP", "Value": 0.973}, {"LOCATION": "BRA", "SUBJECT": "BEEF", "Value": 24.445}, {"LOCATION": "BRA", "SUBJECT": "PIG", "Value": 12.753}, {"LOCATION": "BRA", "SUBJECT": "POULTRY", "Value": 40.762}, {"LOCATION": "BRA", "SUBJECT": "SHEEP", "Value": 0.521}, {"LOCATION": "CHL", "SUBJECT": "BEEF", "Value": 20.262}, {"LOCATION": "CHL", "SUBJECT": "PIG", "Value": 24.762}, {"LOCATION": "CHL", "SUBJECT": "POULTRY", "Value": 37.073}, {"LOCATION": "CHL", "SUBJECT": "SHEEP", "Value": 0.484}, {"LOCATION": "CHN", "SUBJECT": "BEEF", "Value": 4.186}, {"LOCATION": "CHN", "SUBJECT": "PIG", "Value": 22.718}, {"LOCATION": "CHN", "SUBJECT": "POULTRY", "Value": 14.191}, {"LOCATION": "CHN", "SUBJECT": "SHEEP", "Value": 3.305}, {"LOCATION": "COL", "SUBJECT": "BEEF", "Value": 8.62}, {"LOCATION": "COL", "SUBJECT": "PIG", "Value": 8.994}, {"LOCATION": "COL", "SUBJECT": "POULTRY", "Value": 31.704}, {"LOCATION": "COL", "SUBJECT": "SHEEP", "Value": 0.142}, {"LOCATION": "EGY", "SUBJECT": "BEEF", "Value": 7.8}, {"LOCATION": "EGY", "SUBJECT": "PIG", "Value": 0.002}, {"LOCATION": "EGY", "SUBJECT": "POULTRY", "Value": 11.243}, {"LOCATION": "EGY", "SUBJECT": "SHEEP", "Value": 1.093}, {"LOCATION": "IND", "SUBJECT": "BEEF", "Value": 0.532}, {"LOCATION": "IND", "SUBJECT": "PIG", "Value": 0.168}, {"LOCATION": "IND", "SUBJECT": "POULTRY", "Value": 2.517}, {"LOCATION": "IND", "SUBJECT": "SHEEP", "Value": 0.458}, {"LOCATION": "ISR", "SUBJECT": "BEEF", "Value": 23.214}, {"LOCATION": "ISR", "SUBJECT": "PIG", "Value": 1.311}, {"LOCATION": "ISR", "SUBJECT": "POULTRY", "Value": 64.436}, {"LOCATION": "ISR", "SUBJECT": "SHEEP", "Value": 1.525}, {"LOCATION": "NGA", "SUBJECT": "BEEF", "Value": 1.306}, {"LOCATION": "NGA", "SUBJECT": "PIG", "Value": 1.079}, {"LOCATION": "NGA", "SUBJECT": "POULTRY", "Value": 0.842}, {"LOCATION": "NGA", "SUBJECT": "SHEEP", "Value": 1.72}, {"LOCATION": "PAK", "SUBJECT": "BEEF", "Value": 6.422}, {"LOCATION": "PAK", "SUBJECT": "PIG", "Value": 0.0}, {"LOCATION": "PAK", "SUBJECT": "POULTRY", "Value": 6.621}, {"LOCATION": "PAK", "SUBJECT": "SHEEP", "Value": 2.018}, {"LOCATION": "RUS", "SUBJECT": "BEEF", "Value": 10.034}, {"LOCATION": "RUS", "SUBJECT": "PIG", "Value": 20.714}, {"LOCATION": "RUS", "SUBJECT": "POULTRY", "Value": 30.816}, {"LOCATION": "RUS", "SUBJECT": "SHEEP", "Value": 1.276}, {"LOCATION": "UKR", "SUBJECT": "BEEF", "Value": 4.644}, {"LOCATION": "UKR", "SUBJECT": "PIG", "Value": 12.86}, {"LOCATION": "UKR", "SUBJECT": "POULTRY", "Value": 22.693}, {"LOCATION": "UKR", "SUBJECT": "SHEEP", "Value": 0.28}, {"LOCATION": "NOR", "SUBJECT": "BEEF", "Value": 12.806}, {"LOCATION": "NOR", "SUBJECT": "PIG", "Value": 21.102}, {"LOCATION": "NOR", "SUBJECT": "POULTRY", "Value": 17.837}, {"LOCATION": "NOR", "SUBJECT": "SHEEP", "Value": 4.477}, {"LOCATION": "GBR", "SUBJECT": "BEEF", "Value": 11.329}, {"LOCATION": "GBR", "SUBJECT": "PIG", "Value": 15.816}, {"LOCATION": "GBR", "SUBJECT": "POULTRY", "Value": 30.451}, {"LOCATION": "GBR", "SUBJECT": "SHEEP", "Value": 3.928}]
+  },
+  "mark": "bar",
+  "width": 250,
+  "height": 300,
+  "title": {
+    "text": "Meat Consumption",
+    "subtitle": "Beef, Pork, Poultry, Chicken - Kilograms/Capita in 2020 - OECD" ,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "encoding": {
+    "x": {"field": "LOCATION", "sort": "-y", "type": "ordinal", "title": null},
+    "y": {
+      "field": "Value",
+      "title": null,
+      "type": "quantitative"
+      
+    },
+    "color": {
+      "field": "SUBJECT",
+      "type": "nominal",
+      "legend": {"orient": "top-right"},
+      "scale": {
+        "domain": [
+          "BEEF",
+          "PIG",
+          "POULTRY",
+          "SHEEP"
+        ],
+        "scheme": "plasma"
+      },
+      "title": null
+      }
+  }
+}
