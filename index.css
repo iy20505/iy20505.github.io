@@ -15,25 +15,45 @@ body{
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
-h1, h3, p{
+h2, p{
     color: rgb(255, 255, 255);
-    font-family: 'Microsoft JhengHei', sans-serif;
-    text-align: center;
-}
-    
-.myWeek1{
-    margin: auto;
-    max-width: 600px;
-    background-color: black;
+    font-family: 'Consolas', sans-serif;
+    text-align: left;
+    font-size: large;
 }
 
+h1{
+    color: rgb(255, 255, 255);
+    font-family: 'Consolas', sans-serif;
+    text-align: left;
+    font-size: xx-large;
+}
+    
+h3{
+    color: rgb(255, 255, 255);
+    font-family: 'Consolas', sans-serif;
+    text-align: center;
+}
+
+a{
+    
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    color: #d805db;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
 
 /* Set the apperance of the class, chart */
 .chart{
-    background-color: rgb(178, 26, 120);
+    background-color: black;
+    font-family: 'Consolas', sans-serif;
+    text-align: center;
     width:400px;
-    border-width: 10px;
+    border-width: 2px;
     border-style: solid;
     border-radius: 0px;
-    border-color: black;
+    border-color: rgb(216, 5, 210);
 }

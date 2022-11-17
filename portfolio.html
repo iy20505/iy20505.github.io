@@ -11,7 +11,7 @@
     <title>Document</title>
 
     <!-- Link to my style sheet -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="portfolio.css">
 
     <!--The next three lines allow the Vega embed-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
@@ -25,33 +25,39 @@
     <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
     <div class="myWeek1">
        
+<h3>alexhall/portfolio<h3>
+      
+<a href="index.html">home</a>
 
-        <h3>iy20505<h3>
+        <h2>week 1</h2> 
         
-        <h3>week 1</h3> 
-        <p>Tasks - Embed two charts from the rapidcharts repository.</p>
-            
-        
-        <h3>CO2 emissions from food.</h3>
+        <h2>CO2 emissions from food.</h2>
         <p>Kg of CO2 emitted per kg of food.</p>
         <div class= "chart" id="Chart1"></div>
 
-        <h3>Ethererum (ETH): Price vs volume.</h3>
+        <h2>Ethererum (ETH): Price vs volume.</h2>
         <p>Daily ETH price and volume traded.</p>
         <div class="chart" id="Chart2"> </div>
-    
-        <h3>Week 2</h3>
-        <p>Tasks - A chart showing IMF lending (like the one used by the FT), then one improving on it.</p>       
-        <h3>IMF lending at an all-time high?</h3>
+        <hr size="1" width="100%" color= #d805db>
+
+        <h2>week 2 </h2>  
+        <h2>IMF lending at an all-time high?</h2>
         <p>IMF lending to economically troubled countries between 1984 and 2022.</p>
         <div class="chart" id="Chart3"> </div>
         
-        <h3>IMF Lending relative to GDP.</h3>
-       <p>The graph represents IMF lending as a proportion of US GDP and so shows relative size of debt over time. If debt is constant but GDP is rising, the debt will be easier to pay back.</p>
+        <h2>IMF Lending relative to GDP.</h2>
             <div class="chart" id="Chart4"></div>
-<p>In nominal terms, 2022 is the year with the highest amount of IMF lending. However, once scaled for GDP, we see 1984 had the highest burden of debt.</p>
-        
-  
+            <p>The graph represents IMF lending as a proportion of US GDP and so shows relative size of debt over time. If debt is constant but GDP is rising, the debt will be easier to pay back.</p>
+        <p>In nominal terms, 2022 is the year with the most lending. However, once expressed as a fraction of GDP, we see 1984 had the highest burden of debt, making it the 'riskiest' year.</p>
+        <hr size="1" width="100%" color= #d805db>
+        <h2>week 3</h2>
+        <p>A large variation in meat consumption</p>
+        <div class="chart" id="Chart5"></div>
+        <p>Poultry is the most consumed, while sheep is the least.</p>
+        <div class="chart" id="Chart6"></div>
+        <p>The second visual encoding stacks meat conumption values for each country. This allows you to compare total meat consumption between countries.</p>
+        <hr size="1" width="100%" color= #d805db>
+      
     </div> 
 </body>
 
@@ -62,12 +68,17 @@
     var myChart2 = "week1/w1_chart2.json";
     var myChart3 = "week2/w2_IMFtask.json";
     var myChart4 = "week2/w2_IMFtask2.json";
+    var myChart5 = "week3/meat_chart2.json";
+    var myChart6 = "week3/meat_chart1.json"
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#Chart3', myChart3);
     vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
+
 </script>
 
 </html>

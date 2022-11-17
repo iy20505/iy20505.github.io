@@ -1,0 +1,147 @@
+
+
+/* FONTS: */
+
+h1{
+    font-family: 'Consolas', sans-serif;
+    font-size: xx-large;
+    background-color: black;
+    color: white
+}
+
+h3, h2{
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    font-variant: normal;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+p{
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    font-variant: normal;
+    color: white;
+    background-color: black;
+}
+
+
+/* AREAS OF THE PAGE */
+
+body{
+    background-color: black;
+}
+
+
+
+
+/* BUTTONS */
+
+a{
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    color: rgb(216, 5, 219);
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+
+
+    margin:20px}
+
+/* need to add id: in html link */
+
+#link1{
+    border-color:red;
+    border-style:dashed
+}
+
+#link2{
+    border:2px;
+    border-color:black;
+    border-style: solid;
+
+    border-radius: 5px;
+
+}
+
+#link3{
+    background-color: rgba(0, 47, 167, .5);
+
+    padding:20px;
+    
+    border:2px;
+    border-color:grey;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:white;
+    
+    text-decoration: none;
+    
+}
+
+#link3:hover{
+
+    background-color: rgba(0, 47, 167, .8);
+
+    border:2px;
+    border-color:yellow;
+    border-style: solid;
+    
+}
+
+
+#link4{
+    background-color: yellow;
+
+    padding:20px;
+    
+    border:20px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:grey;
+    
+    text-decoration: none;
+
+    animation: border-pulsate1 4s infinite;
+}
+
+
+
+
+
+/* CODE FOR PUSLING BORDERS */
+  @keyframes border-pulsate1 {
+    0%   { border-color: rgba(230, 34, 75, 1); }
+    50%  { border-color: rgba(230, 34, 75, 0); }
+    100% { border-color: rgba(230, 34, 75, 1); }
+  }
+  
+  @keyframes border-pulsate2 {
+    0%   { border-color: #22e68b}
+    10%  { border-color: rgba(230, 34, 75, 0)}
+    20%  { border-color: rgba(230, 34, 75)}
+    30%  { border-color: rgba(230, 34, 75, 0)}
+    40%  { border-color: rgba(0, 47, 167)}
+    50%  { border-color: rgba(230, 34, 75, 0)}
+    60%  { border-color: rgba(250, 250, 0)}
+    70%  { border-color: rgba(230, 34, 75, 0)}
+    80% { border-color: #22e68b}
+  }
+
+  @keyframes myAnimation {
+    0%   {border-color: #22e68b; background-color: black}      
+    50%  {border-color: black; background-color:yellow}
+    
+  }
+/* CODE FOR PUSLING BORDERS */
+  
+

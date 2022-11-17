@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+
+
+h1{
+    font-family: 'Consolas', sans-serif;
+    font-size: xx-large;
+    background-color: black;
+    color: white
+}
+
+h3{
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    font-variant: normal;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+p{
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    font-variant: normal;
+    color: white;
+    background-color: black;
+}
+
+
+/* AREAS OF THE PAGE */
+
+body{
+    background-color: black;
+}
+
+
+
+
+/* BUTTONS */
+
+a{
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    color: rgb(216, 5, 219);
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+
+
+    margin:20px}
