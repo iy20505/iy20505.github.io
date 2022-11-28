@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "South America",
+      "subtitle": "Base map", 
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10
+    },
+    "width": 400,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week7/south_am.json",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "stereographic"},
+    "mark": {
+      "type": "geoshape",
+      "stroke": "white",
+      "fill": "lightgray",
+      "strokeWidth": 0.5
+    },
+    "encoding": {"tooltip": {"field": "properties.name", "type": "nominal"}}
+  }
