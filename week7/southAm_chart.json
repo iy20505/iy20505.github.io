@@ -7,13 +7,13 @@
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10
     },
-    "width": 400,
-    "height": 400,
+    "width": 370,
+    "height": 390,
     "data": {
-      "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week7/south_am.json",
+      "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week7/southAm.json",
       "format": {"property": "features"}
     },
-    "projection": {"type": "stereographic"},
+    "projection": {"type": "mercator"},
     "mark": {
       "type": "geoshape",
       "stroke": "white",

@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "GDP in South America",
+    "title": {
+      "text": "Brazil the strongest in South America",
+      "subtitle": "GDP in South America. Source: CIA World Factbook ",
+      "subtitleFontSize": 10,
+      "subtitleFontStyle": "italic",
+      "anchor": "start"
+    },
+    "width": 280,
+    "height": 390,
+    "data": {
+      "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week7/southAm.json",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "mercator"},
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week7/southAm_gdp2.csv"
+          },
+          "key": "Country",
+          "fields": ["GDP"]
+        }
+      }
+    ],
+    "mark": {"type": "geoshape", "stroke": "darkgray", "strokeWidth": 0.5},
+    "encoding": {
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {
+          "field": "GDP",
+          "title": "GDP ($bn)"
+        }
+      ],
+      "color": {
+        "field":"GDP",
+        "legend":{
+            "title":"GDP ($bn)",
+            "orient": "right",
+            "direction": "vertical"},
+        "type": "quantitative",
+        "scale":{"scheme":"lighttealblue"}}
+    }
+  }
