@@ -1,37 +1,49 @@
-body{
-    background-color: black;
-}
-
 h1{
     font-family: 'Consolas', sans-serif;
     font-size: xx-large;
     background-color: black;
-    color: white
+    color: lightgray;
 }
 
 h3{
     font-family: 'Consolas', sans-serif;
     font-size: large;
     font-variant: normal;
-    color: white;
+    color: lightgray;
     background-color: black;
     text-align: center;
+
 }
 
+h2{
+    font-family: 'Consolas', sans-serif;
+    font-size: medium;
+    font-variant: normal;
+    color: lightgray;
+    background-color: black;
+    text-align: left;
+}
 p{
     font-family: 'Consolas', sans-serif;
-    font-size: large;
+    font-size: medium;
     font-variant: normal;
-    color: white;
+    color: lightgray;
     background-color: black;
+    text-align: left
 }
 
 
 /* AREAS OF THE PAGE */
 
-
-.wrap{
+body{
     background-color: black;
+    background-size: cover;
+    margin: 0;
+    justify-content: center;
+    flex-direction: center;
+    align-items: column;
+    margin-left: 300px;
+    margin-right: 300px
 }
 
 
@@ -42,14 +54,25 @@ p{
 a{
     font-family: 'Consolas', sans-serif;
     font-size: large;
-    color: rgb(216, 5, 219);
+    color: #040c82;
     border: 3px;
     border-color: black;
     border-style: solid;
     text-align: center;
 
 
-    margin:20px
+    margin:20px}
+
+/* need to add id: in html link */
+
+.chart{ 
+    justify-content: center;
+    align-items: center;
+    margin-left: 160px;
+    margin-right: 160px;
+    width: 30%;
+    display: block;
+    margin: auto
 }
 
 /* need to add id: in html link */

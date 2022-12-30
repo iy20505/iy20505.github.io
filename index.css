@@ -1,3 +1,5 @@
+
+
 /* Richard Davies, Data Science for Economists */
 
 /* This is my first proper css file */
@@ -9,42 +11,72 @@
 
 /* Set the background color for my page: */
 body{
-    background-color: black;
- 
+    
+        background-color: black;
+        background-size: cover;
+        margin: 0;
+        justify-content: center;
+        flex-direction: center;
+        align-items: column;
+        margin-left: 300px;
+        margin-right: 300px
+    
 }
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
-h2, p{
-    color: rgb(255, 255, 255);
+p{
+    color: rgb(3, 72, 117);
     font-family: 'Consolas', sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: large;
+    justify-content: center;
+    align-items: center;
 }
 
 h1{
-    color: rgb(255, 255, 255);
+    color: rgb(129, 161, 250);
+    font-family: 'Consolas', sans-serif;
+    text-align: center;
+    font-size: x-large;
+}
+
+h2{
+    color: silver;
     font-family: 'Consolas', sans-serif;
     text-align: left;
-    font-size: xx-large;
+    font-size: medium;
 }
-    
+
+img {
+    display: block;
+    margin: auto;
+}
+
+
 h3{
-    color: rgb(255, 255, 255);
+    color: silver;
     font-family: 'Consolas', sans-serif;
     text-align: center;
 }
 
 a{
     
-    font-family: 'Consolas', sans-serif;
-    font-size: large;
-    color: #d805db;
-    border: 3px;
-    border-color: black;
-    border-style: solid;
-    text-align: center;
-}
+
+        font-family: 'Consolas', sans-serif;
+        font-size: large;
+        color: 	#040c82;
+        border: 3px;
+        border-color: black;
+        border-style: solid;
+        text-align: center;
+        font-size: large;
+        justify-content: center;
+        align-items: center;
+    
+    
+        margin:20px}
+
 
 /* Set the apperance of the class, chart */
 .chart{

@@ -4,26 +4,38 @@
 
 h1{
     font-family: 'Consolas', sans-serif;
-    font-size: xx-large;
+    font-size: medium;
     background-color: black;
-    color: white
+    color: white;
+    text-align: left;
 }
 
-h3, h2{
+h2{
     font-family: 'Consolas', sans-serif;
     font-size: large;
     font-variant: normal;
     color: white;
     background-color: black;
     text-align: center;
+
+}
+
+h3{
+    font-family: 'Consolas', sans-serif;
+    font-size: xx-large;
+    font-variant: normal;
+    color: white;
+    background-color: black;
+    text-align: left;
 }
 
 p{
     font-family: 'Consolas', sans-serif;
-    font-size: large;
+    font-size: medium;
     font-variant: normal;
     color: white;
     background-color: black;
+    text-align: left
 }
 
 
@@ -31,6 +43,13 @@ p{
 
 body{
     background-color: black;
+    background-size: cover;
+    margin: 0;
+    justify-content: center;
+    flex-direction: center;
+    align-items: column;
+    margin-left: 300px;
+    margin-right: 300px
 }
 
 
@@ -41,7 +60,7 @@ body{
 a{
     font-family: 'Consolas', sans-serif;
     font-size: large;
-    color: rgb(216, 5, 219);
+    color: #040c82;
     border: 3px;
     border-color: black;
     border-style: solid;
@@ -50,7 +69,21 @@ a{
 
     margin:20px}
 
+
 /* need to add id: in html link */
+
+
+
+.chartS {
+    justify-content: baseline;
+    align-items: baseline;
+    margin-left: 160px;
+    margin-right: 160px;
+    width: 30%;
+    display: block;
+    margin: auto
+
+}
 
 #link1{
     border-color:red;
