@@ -2,7 +2,7 @@
 
   "title": {
       "text": "IMF Credit Outstanding",
-      "subtitle":"in SDRs for all members from 1984 - 2022 ($b). Source: IMF",
+      "subtitle":"In SDRs for all members from 1984 - 2022 ($b). Source: IMF",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -15,11 +15,11 @@
   ],
   
   "height": 300,
-  "width": 300,
+  "width": 400,
 
   "mark": {
     "type": "bar",
-    "color": "rgb(200,50,100)"},
+    "color": "#9b2824"},
 
 "encoding": {
      "x": {
@@ -28,8 +28,7 @@
        "axis": {
          "title": null,
          "grid": false,
-         "ticks": false,
-         "labelAngle": 45}},
+         "ticks": false}},
 
       "y": {
         "field": "billions",
