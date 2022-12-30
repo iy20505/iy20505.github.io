@@ -1,83 +1,70 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ 
+   "data": {"url": "https://raw.githubusercontent.com/RDeconomist/prices/master/analysis/priceChangesByDivision.csv"},
 
+   "title": {
+    "text": "Inflation heatmap",
+    "subtitle": "Share of prices rising (x-axis) vs falling (y-axis). Source: ONS",
+    "subtitleColor": "lightgray",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "lightgray"
+  },
+  
+  "background": "black",
+  "mark": "rect",
+  "width": 410,
+  "height": 322,
 
- "title": {
-  "text": "Ether: Price vs volume",
-  "subtitle":"Daily ETH price and volume traded",
-  "subtitleFontStyle":"italic",
-  "subtitleFontSize":10,
-  "anchor": "start"},
+  "transform": [
+    {"filter":"datum.up_sh<0.20"},
+    {"filter":"datum.down_sh<0.20"}
+  ],
+  
+  "encoding": {
+   
+    "x": {
+      "bin": {"maxbins":10},
+      "field": "up_sh",
+      "type": "quantitative",
+      "scale":{"domain":[0, 0.20]},
+      "title":"Rising prices",
+      "axis":null
+    },
 
-  "width":260,
-  "height":300,
+    "y": {
+      "bin": {"maxbins": 10},
+      "field": "down_sh",
+      "type": "quantitative",
+      "scale":{"domain":[0, 0.20]},
+      "title":"Falling prices",
+      "axis":null
+    },
+   
+    "color": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "legend":null,
+      "scale":{"scheme":"magma"}
+    },
 
-
-  "data": {
-    "name":"myData",
-    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/crypto/dataETH.csv"},
-
-
-  "encoding": {     
-      "x": {
-        "field": "Date",
+    "Xfacet": {
+      "field": "division_sh",
+      "title":null,
+      "columns": 4,
+      "header":{
         "title":null,
-        "type": "temporal"}
-        },
-          
-   "layer":[
-
-      {"mark": {
-          "type": "line",
-          "point": false,
-          "strokeWidth":1,
-          "width":1
-        },
-
-      "encoding": {
-          "y": {
-          "field": "Volume",
-          "type": "quantitative",
-          "title": "",
-          "axis": {
-            "grid": false,            
-            "labelColor":"red",
-            "format":",.5"}
-            },
-            
-          "color": {
-            "datum": "Volume",
-            "scale": {"range": ["blue", "red"]},
-            "legend":{
-              "orient": "top-left"}}}
+        "labelColor":"white"
       },
+      "spacing":0}
 
-     {"mark": {
-          "type": "line",
-          "point": false,
-          "strokeWidth":1
-        },
 
-      "encoding": {
-          "y": {
-          "field": "Price",
-          "type": "quantitative",
-          "title": "",
-          "axis": {
-            "grid": false,
-            "labelColor":"blue",
-            "format":"$,.5"}
-            },
-            
-          "color": {
-            "datum": "Price",
-            "scale": {"range": ["orange", "hotpink"]},
-            "legend":{
-              "orient": "top-left"}}
-        
-        } 
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
     }
-],
-
-    "resolve": {"scale": {"y": "independent"}} 
+  }
 }
