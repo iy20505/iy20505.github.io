@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "A daily price chart for BTC using coinapi.io.",
+
+   "title": {
+    "text": "Bitcoin: Live Price",
+    "subtitle":"The last 100 days. Source: CoinAPI",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor":"black"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+ 
+   "transform": [
+      
+        {"calculate": "datum.price_close", "as": "price"},
+        {"calculate": "datum.price_high", "as": "priceh"},
+        {"calculate": "datum.price_low", "as": "pricel"},
+        
+      
+        {"filter": "datum.price >= 10000"},
+        {"filter": "datum.pricel >= 10000"},
+        {"filter": "datum.priceh >= 10000"}
+  ],
+  
+  "data": {
+    "url": "https://rest.coinapi.io/v1/ohlcv/COINBASE_SPOT_BTC_USD/latest?apikey=05A26C84-F9C4-4593-861D-CBCF4A30BA4F&period_id=1DAY&limit=100",
+    "format": {"type": "json"}},
+  
+
+
+
+  "height": 300,
+  "width": 350,
+
+  "mark": {
+    "type": "area",
+    "interpolate": "monotone",
+    "color":"gold"
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "time_close",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false}},
+
+    "y": {
+      "field": "priceh",
+      "type": "quantitative",
+      "scale":{"domain": [13000,24000]},
+      "title": "",
+      "axis": {
+        "format":"$,.5",
+        "grid": false}
+        },
+
+    "y2": {
+      "field": "pricel",
+      "type": "quantitative",
+      "title": null
+    },
+
+    "tooltip": [
+      {"field": "time_close", "type": "temporal", "title": "Date"},
+      {"field": "price", "type": "quantitative", "title": "Close Price", "format":"$,.5"}]
+
+}}
