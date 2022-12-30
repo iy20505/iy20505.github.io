@@ -1,0 +1,55 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "FTX bankruptcy and Bitcoin",
+
+    "title": {
+      "text": "FTT collapse sinks Bitcoin",
+      "subtitle": "Bitcoin and FTT index prices for Nov 2022. Source: yfinance",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10},
+
+    "width": 415,
+    "height": 300,
+
+  "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week8/btc_ftt2.csv"},
+
+
+  "transform": [
+    {"calculate": "datum.BTC/20213.94922*100", "as": "BTC"},
+    {"calculate": "datum.FTT/25.10049248*100", "as": "FTT"}
+  ],
+
+  "repeat": {"layer": ["BTC", "FTT"]},
+
+  "spec":{
+    "mark": {"type": "line"},
+
+    "encoding": {
+      "x": {
+        "field": "Datetime",
+        "type": "temporal", 
+        "title": null,
+        "axis": {
+          "format": {"type": "utc"},
+          "grid": false,
+          "tickCount": 5
+   }
+          },
+
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": null,
+        "axis":{"grid": false}},
+
+      "color": {
+        "datum": {"repeat": "layer"},
+        "scale": {"range": ["darkorange", "darkblue"]},
+        "legend": {
+          "orient": "top-right",
+          "fillColor": "white"}}
+        }
+      }
+      }

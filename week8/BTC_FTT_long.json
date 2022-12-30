@@ -1,0 +1,55 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "FTX bankruptcy and Bitcoin",
+
+    "title": {
+      "text": "Zoom out",
+      "subtitle": "Bitcoin and FTT index prices for 2022. Source: yfinance",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10},
+
+    "width": 415,
+    "height": 304,
+
+  "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week8/btc_ftt_long.csv"},
+
+
+  "transform": [
+    {"calculate": "datum.BTC/47686.8125*100", "as": "BTC"},
+    {"calculate": "datum.FTT/40.20424652*100", "as": "FTT"}
+  ],
+
+  "repeat": {"layer": ["BTC", "FTT"]},
+
+  "spec":{
+    "mark": {"type": "line"},
+
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal", 
+        "title": null,
+        "axis": {
+          "format": "%b",
+          "tickCount": 7,
+          "grid": false
+   }
+          },
+
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": null,
+        "axis":{"grid": false}},
+
+      "color": {
+        "datum": {"repeat": "layer"},
+        "scale": {"range": ["darkorange", "darkblue"]},
+        "legend": {
+          "orient": "top-right",
+          "fillColor": "white"}}
+        }
+      }
+      }
