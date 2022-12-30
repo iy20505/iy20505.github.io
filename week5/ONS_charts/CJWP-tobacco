@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week5/data_ONS-CJWP.json",
+    "format": {"type": "json", "property": "years"}
+  },
+  "title": {
+    "text": "CPI weights - Tobacco",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "color": "black"
+  },
+  "background": "lightgrey",
+  "width": 275,
+  "height": 170,
+  "mark": {"type": "line", "color": "#1e144d"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"grid": false},
+      "title": ""
+    },
+    "y": {
+      "field": "value",
+      "scale": {"domain": [0, 200]},
+      "type": "quantitative",
+      "axis": {"grid": false},
+      "title": null
+    }
+  }
+}
