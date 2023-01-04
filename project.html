@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project 追逐鬼魂</title>
+    <title>追逐鬼魂 project</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 </head>
 <link rel="stylesheet" href="project.css">
 <link rel="icon" href="pictures/face.png">
@@ -12,18 +15,106 @@
     <h2>AlexHall @ 2022-10-09T09:33:12+01:00</h2>
     <center><a href="index.html">home</a></center>
 <h1>Risk-adjusted returns for crypto <img src="pictures/robot5.png" alt="image" width="130" height="130"></h1>
-<br />
+<hr size="2" width="100%" color= #040c82>
 
-<img src="pictures/chatgbt2.png" width="1050" height="200">
+<h4>Questions</h4>
+<p>How can we correct for market risk in crypto?</p>
+<p>Who has the highest risk-adjusted returns?</p>
 
-<p>Bitcoin's value largely comes from it existing as an inflation hedge. Fiat money, such as the dollar, can be printed infinitely which dilutes the value of each individual dollar and increases the price of things; otherwise known as inflation. We therefore seek something scarce to protect (or hedge) against this, like gold, prime real estate, and more recently bitcoin.</p>
+<h4>Roadmap</h4>
+<p>- The beginning of crypto</p>
+<p>- Heart's Law - correlation</p>
+<p>- Standard deviation - volatility risk</p>
+<p>- Crypto beta - is btc the S&P 500 of crypto</p>
 
-<p>Amidst the euphoria of 2021, bitcoin seemed unstoppable with its powerful narrative of protecting against inflation and government confiscation. However, the last 12 months have led many to question bitcoin’s validity as a hedge. If inflation is up, why is btc down?</p>
+<img src="pictures/chatgbt2.png" width="950" height="200">
+
+
+<h4>The beginning of crypto</h4>
+
+<p>Bitcoin emerged out of the 2008 financial crisis as an alternative monetary instrument, not controlled by any central authority or government. 
+    The success of btc paved the way for others to experiment creating new cryptocurrencies. 
+    But this diverted money away from btc and over time ate away at its market share.
+</p>
+
+
+
+<a href="https://colab.research.google.com/drive/1qHY6FhWrJMCDWDbI_avCOZQeYP_xrnEx">colab page</a>
+<br>
+<br>
+<center><div class="chart" id="Chart1"></div><div class="chart" id="Chart3"></div></center>
+<br>
+<hr size="2" width="100%" color= #040c82>
+
+<h4>Heart's Law</h4>
+
+<p>Cryptocurrencies are highly correlated with each - in other words, they all move together. 
+    A key reason for this is explained with Heart's Law: 
+    price movements of interchangeable assets are connected through the liquidity of their trading pairs.<a href="https://0xcoast.com/2021/06/what-is-hearts-law/#:~:text=Heart%E2%80%99s%20Law%E2%80%A6%20that%20price%20movements%20of%20interchangeable%20assets,based%20on%20the%20liquidity%20of%20their%20Uniswap%20pairs.">[1]</a></p>
+
+
+<a href="https://colab.research.google.com/drive/1qHY6FhWrJMCDWDbI_avCOZQeYP_xrnEx">colab page</a>
+<br>
+<br>
+<center><div class="chart" id="Chart6"></div><div class="chart" id="Chart4"></div></center>
+<br>
+
+<a href="https://colab.research.google.com/drive/1ZLFKtEFUHzGHoacT4gODqiXBrtdcjGcd#scrollTo=UM5gyX4WmhjR">matrix colab page</a>
+<br>
+<br>
+<img src="pictures/corr_matrix.png" width="1000" height="200">
+<br>
+<br>
+<p>Note: the coins selected are the top ten largest by market cap and also are the most viewed on CoinMarketCap (thus a proxy for popularity).</p>
+<p>Action! When creating a crypto portfolio, use the correlation matrix to diversify. Make sure the coins picked are not all heavily correlated.</p>
+
+
+<hr size="2" width="100%" color= #040c82>
+
+
+<h4>Standard deviation</h4>
+
+<p>Sd is a measure of volatility, and in financial markets its one measure of risk. The more the asset deviates from its mean (higher Sd), the riskier it is. 
+    Sd will later be used for risk-adjmentment calculations.<a href="https://www.investopedia.com/ask/answers/041415/what-are-some-common-measures-risk-used-risk-management.asp#:~:text=Certain%20statistical%20methods%20can%20help%20investors%20measure%20risk,of%20Risks%20...%207%20The%20Bottom%20Line%20">[2]</a></p>
+    <center><div class="chart" id="Chart7"></div><div class="chart" id="Chart8"></div></center>
 
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor officiis temporibus eius? Quos dolore at accusantium assumenda, reprehenderit ducimus? Sapiente praesentium ipsum enim libero repudiandae! Enim similique asperiores possimus adipisci saepe nisi. Blanditiis maxime nam nulla illo eaque. Eius alias, error quisquam sequi asperiores magni labore voluptates esse, et architecto fugiat velit? Mollitia et obcaecati, unde explicabo, nesciunt optio sint corporis saepe molestiae sit quo reprehenderit id! Corrupti, modi qui asperiores cumque, beatae fugiat tempore tempora ratione quibusdam fugit consequatur consectetur amet voluptate repellat reiciendis ipsa architecto veniam doloremque facere exercitationem. Pariatur voluptatibus ad nisi excepturi reprehenderit ipsam officiis aperiam sequi qui numquam aliquam, voluptatum quae aspernatur nihil explicabo. Modi eos earum sequi fugit fugiat illo sed unde magnam assumenda officiis, commodi neque eius, voluptatibus necessitatibus sit blanditiis. Magnam recusandae voluptatum quibusdam mollitia quia iure aliquid veritatis consectetur? Alias repellat ut voluptate fuga deleniti officiis repellendus eligendi eaque! Odio eaque fugiat nobis excepturi, nulla placeat provident? Quo fuga adipisci explicabo at molestias recusandae accusamus alias, corrupti repudiandae, voluptatibus nulla temporibus minima rerum perferendis facere excepturi consequuntur quidem sit provident? Eligendi culpa eius quidem laudantium. Tenetur voluptatem, numquam rem odio mollitia illo voluptas laboriosam. Id labore iusto ab beatae accusantium sed!</p>
 
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor officiis temporibus eius? Quos dolore at accusantium assumenda, reprehenderit ducimus? Sapiente praesentium ipsum enim libero repudiandae! Enim similique asperiores possimus adipisci saepe nisi. Blanditiis maxime nam nulla illo eaque. Eius alias, error quisquam sequi asperiores magni labore voluptates esse, et architecto fugiat velit? Mollitia et obcaecati, unde explicabo, nesciunt optio sint corporis saepe molestiae sit quo reprehenderit id! Corrupti, modi qui asperiores cumque, beatae fugiat tempore tempora ratione quibusdam fugit consequatur consectetur amet voluptate repellat reiciendis ipsa architecto veniam doloremque facere exercitationem. Pariatur voluptatibus ad nisi excepturi reprehenderit ipsam officiis aperiam sequi qui numquam aliquam, voluptatum quae aspernatur nihil explicabo. Modi eos earum sequi fugit fugiat illo sed unde magnam assumenda officiis, commodi neque eius, voluptatibus necessitatibus sit blanditiis. Magnam recusandae voluptatum quibusdam mollitia quia iure aliquid veritatis consectetur? Alias repellat ut voluptate fuga deleniti officiis repellendus eligendi eaque! Odio eaque fugiat nobis excepturi, nulla placeat provident? Quo fuga adipisci explicabo at molestias recusandae accusamus alias, corrupti repudiandae, voluptatibus nulla temporibus minima rerum perferendis facere excepturi consequuntur quidem sit provident? Eligendi culpa eius quidem laudantium. Tenetur voluptatem, numquam rem odio mollitia illo voluptas laboriosam. Id labore iusto ab beatae accusantium sed!</p>
-
+<p>Yfinance is chosen for several reasons; its iterative and customisable nature; ohlcv data; and because crypto APIs limit you to 100 requests a day.</p>
 
 </body>
+
+<script>
+
+var myChart1 = "project/long.json";
+var myChart2 = "XYZproject/btc_live2.json";
+var myChart3 = "project/eating.json";
+var myChart4 = "project/btc_eth.json";
+var myChart5 = "project/corr_fall.json";
+var myChart6 = "project/corr_rise.json"
+var myChart7 = "project/returns_std.json"
+
+
+
+
+
+
+
+vegaEmbed('#Chart1', myChart1);
+vegaEmbed('#Chart2', myChart2);
+vegaEmbed('#Chart3', myChart3);
+vegaEmbed('#Chart4', myChart4);
+vegaEmbed('#Chart6', myChart6);
+vegaEmbed('#Chart5', myChart5);
+vegaEmbed('#Chart7', myChart7);
+
+
+
+
+
+
+
+</script>
+
+
 </html>

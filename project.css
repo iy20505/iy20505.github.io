@@ -15,6 +15,17 @@ h3{
 
 }
 
+h4{
+    font-family: 'Consolas', sans-serif;
+    font-size: large;
+    font-variant: normal;
+    color: lightgray;
+    background-color: black;
+    text-align: left;
+    font-weight: bold;
+
+}
+
 h2{
     font-family: 'Consolas', sans-serif;
     font-size: medium;
@@ -39,14 +50,13 @@ body{
     background-color: black;
     background-size: cover;
     margin: 0;
-    justify-content: center;
-    flex-direction: center;
-    align-items: column;
     margin-left: 300px;
     margin-right: 300px
 }
 
-
+.chart{
+    margin: auto
+}
 
 
 /* BUTTONS */
@@ -58,22 +68,12 @@ a{
     border: 3px;
     border-color: black;
     border-style: solid;
-    text-align: center;
-
 
     margin:20px}
 
 /* need to add id: in html link */
 
-.chart{ 
-    justify-content: center;
-    align-items: center;
-    margin-left: 160px;
-    margin-right: 160px;
-    width: 30%;
-    display: block;
-    margin: auto
-}
+
 
 /* need to add id: in html link */
 
