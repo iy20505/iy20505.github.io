@@ -5,8 +5,9 @@
 
    "title": {
     "text": "Bitcoin: Live Price",
-    "subtitle":"The last 100 days. Source: CoinAPI",
+    "subtitle":"The last 7 days. Source: CoinAPI",
     "subtitleFontSize":10,
+    "subtitleFontStyle": "italic",
     "anchor": "start",
     "color": "black",
     "subtitleColor":"black"},
@@ -29,14 +30,14 @@
   ],
   
   "data": {
-    "url": "https://rest.coinapi.io/v1/ohlcv/COINBASE_SPOT_BTC_USD/latest?apikey=05A26C84-F9C4-4593-861D-CBCF4A30BA4F&period_id=1DAY&limit=100",
+    "url": "https://rest.coinapi.io/v1/ohlcv/COINBASE_SPOT_BTC_USD/latest?apikey=05A26C84-F9C4-4593-861D-CBCF4A30BA4F&period_id=1HRS&limit=168",
     "format": {"type": "json"}},
   
 
 
 
   "height": 300,
-  "width": 350,
+  "width": 400,
 
   "mark": {
     "type": "area",
@@ -56,7 +57,7 @@
     "y": {
       "field": "priceh",
       "type": "quantitative",
-      "scale":{"domain": [13000,24000]},
+      "scale":{"domain": [16000,17200]},
       "title": "",
       "axis": {
         "format":"$,.5",

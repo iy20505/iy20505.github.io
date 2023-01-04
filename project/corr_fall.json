@@ -1,0 +1,59 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Correlated fall of 2022",
+      "subtitle": "Top ten coins indexed for the last 12 months. Source: yfinance",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10},
+
+    "width": 415,
+    "height": 320,
+
+  "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week9/10cryptos.csv"},
+
+  "transform": [
+    {"calculate": "datum.BTC/67566.82813*100", "as": "BTC"},
+    {"calculate": "datum.ETH/4812.087402*100", "as": "ETH"},
+    {"calculate": "datum.SHIB/5.50E-05*100", "as": "SHIB"},
+    {"calculate": "datum.SOL/248.4671783*100", "as": "SOL"},
+    {"calculate": "datum.XRP/1.282377005*100", "as": "XRP"},
+    {"calculate": "datum.ADA/2.124418974*100", "as": "ADA"},
+    {"calculate": "datum.BNB/654.3150024*100", "as": "BNB"},
+    {"calculate": "datum.DOGE/0.282359004*100", "as": "DOGE"},
+    {"calculate": "datum.DOT/53.34845734*100", "as": "DOT"},
+    {"calculate": "datum.MATIC/1.894047022*100", "as": "MATIC"}
+  ],
+
+  "repeat": {"layer": ["BTC", "ETH", "SHIB", "SOL", "ADA", "BNB", "DOGE", "DOT", "XRP", "MATIC"]},
+
+  "spec":{
+    "mark": {"type": "line", "strokeWidth": 0.7},
+
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal", 
+        "title": null,
+        "axis": {
+          "grid": false,
+          "format": "%b"
+        }},
+
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": null,
+        "scale":{"domain": [0,153]},
+        "axis": {"grid":false}},
+
+      "color": {
+        "datum": {"repeat": "layer"},
+        "scale": {"range": ["darkorange", "darkblue", "lightgreen", "purple", "gray", "black", "pink", "royalblue", "green", "lightblue"]},
+        "legend": {
+          "orient": "top-right",
+          "fillColor": "white"}}
+        }
+      }
+      }

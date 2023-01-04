@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/10c_shares2.csv"},
+  
+  
+    "title": {
+      "text": "Eating away at Bitcoin (black)",
+      "subtitle":"Market shares out of the top ten cryptos. Source: yfinance.",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "width": 370, "height": 320,
+      
+    "mark": "area",
+    
+  
+  
+    "encoding": {
+      "x": {
+        "timeUnit": "yearmonth",
+        "field": "Date",
+        "title":null
+      },
+    
+      "y": {
+        "field": "share", 
+        "type": "quantitative",
+        "axis": {"format": ".0%"},
+        "title":null,
+        "scale":{"domain":[0,1]}
+      },
+  
+      "color": {
+        "field": "token",
+        "scale": {"range": ["#363636", "#008080", "black", "#8B0000", "#004953", "#000080", "purple", "#808080", "#4B0082", "lightgrey"]},
+        "title":"Crypto"
+      }
+    
+    
+    }
+  }

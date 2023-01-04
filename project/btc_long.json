@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 420,
+    "height": 320,
+    "title": {
+      "text": "Bumpy ride",
+      "subtitle": "Bitcoin monthly price for the last 6 years. Source: yfinance.",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/btc_candle3.csv"
+    },
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "axis": {"grid": false, "title": null}
+      },
+      "y": {
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "axis": {"title": null, "format": "$,.5", "grid": false}
+      },
+      "color": {
+        "condition": {"test": "datum.Open < datum.Close", "value": "#008080"},
+        "value": "#663399"
+      }
+    },
+    "layer": [
+      {
+        "mark": "rule",
+        "encoding": {"y": {"field": "Low"}, "y2": {"field": "High"}}
+      },
+      {
+        "mark": "bar",
+        "encoding": {"y": {"field": "Open"}, "y2": {"field": "Close"}}
+      }
+    ]
+  }

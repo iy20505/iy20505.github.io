@@ -1,0 +1,58 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Correlated bull run of 2021",
+      "subtitle": "Top ten coins indexed for the first 100 days of 2021. Source: yfinance",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10},
+
+    "width": 415,
+    "height": 320,
+
+  "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/testing2.csv"},
+
+  "transform": [
+    {"calculate": "datum.BTC/64863.09766*100", "as": "BTC"},
+    {"calculate": "datum.ETH/2449.6875*100", "as": "ETH"},
+    {"calculate": "datum.SHIB/1.00E-06*10", "as": "SHIB"},
+    {"calculate": "datum.SOL/27.48269272*100", "as": "SOL"},
+    {"calculate": "datum.XRP/1.964997053*100", "as": "XRP"},
+    {"calculate": "datum.ADA/1.557760954*100", "as": "ADA"},
+    {"calculate": "datum.BNB/590.4174194*100", "as": "BNB"},
+    {"calculate": "datum.DOGE/0.142509997*100", "as": "DOGE"},
+    {"calculate": "datum.DOT/44.5342598*100", "as": "DOT"},
+    {"calculate": "datum.MATIC/0.448523015*100", "as": "MATIC"}
+  ],
+
+
+
+  "repeat": {"layer": ["BTC", "ETH", "SHIB", "SOL", "ADA", "BNB", "DOGE", "DOT", "XRP", "MATIC"]},
+
+  "spec":{
+    "mark": {"type": "line", "strokeWidth": 0.7},
+
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal", 
+        "title": null,
+        "axis": {
+          "grid": false
+        }},
+
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid":false}},
+
+      "color": {
+        "datum": {"repeat": "layer"},
+        "scale": {"range": ["darkorange", "darkblue", "lightgreen", "purple", "gray", "black", "pink", "royalblue", "green", "lightblue"]},
+        "legend": {"orient": "top-right",
+          "fillColor": "white"}}
+        }
+      }
+      }
