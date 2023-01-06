@@ -10,7 +10,7 @@
       "subtitleFontSize": 10,
       "color": "black"
     },
-    "background": "lightgrey",
+    "background": "aliceblue",
     "width": 275,
     "height": 170,
     "mark": {"type": "line", "color": "#1e144d"},
