@@ -43,6 +43,15 @@ p{
     text-align: left
 }
 
+h5{
+    font-family: 'Consolas', sans-serif;
+    font-size: medium;
+    font-variant: normal;
+    color: lightgray;
+    background-color: black;
+    text-align: center
+}
+
 
 /* AREAS OF THE PAGE */
 
@@ -86,6 +95,10 @@ a{
 
     border-radius: 5px;
 
+}
+
+.chartS{
+    margin-left: 27%;
 }
 
 #link3{
