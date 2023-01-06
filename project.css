@@ -58,10 +58,6 @@ h5{
 body{
     background-color: black;
     background-size: cover;
-    margin: 0;
-    justify-content: center;
-    flex-direction: center;
-    align-items: column;
     margin-left: 300px;
     margin-right: 300px
 }
