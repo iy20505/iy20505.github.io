@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+  "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/returns_std3.csv"
+  },
+  "title": {
+    "text": "Treynor ratio - returns",
+    "subtitle": "For the top ten crypto, last 2 years. Source: yfinance",
+    "anchor": "start",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10
+  },
+  "background": "aliceblue",
+  "width": 375,
+  "height": 250,
+  "mark": {"type": "bar", "size": 22},
+  "encoding": {
+    "x": {
+      "field": "token",
+      "type": "nominal",
+      "axis": {"labelAngle": 0},
+      "title": null
+    },
+    "y": {
+      "field": "Treynor",
+      "type": "quantitative",
+      "scale": {"domain": [0, 40]},
+      "axis": {"grid": true, "title": null, "minExtent": 1}
+    },
+    "color": {
+      "field": "Treynor",
+      "type": "quantitative",
+      "scale": {"range": ["lightblue", "#02736b"], "domain": [0, 8, 40]}
+    },
+    "XYZcolor:selected": {
+      "field": "Treynor",
+      "type": "quantitative",
+      "scale": {"range": ["#ab07", "#414487"], "domain": [0, 1.2, 100]},
+      "selected": {"not": {"selection": "brush"}}
+    }
+  }
+}

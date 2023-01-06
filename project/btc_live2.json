@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "description": "A daily price chart for BTC using coinapi.io.",
+  "description": "A hourly price chart for BTC using coinapi.io.",
 
    "title": {
     "text": "Bitcoin: Live Price",
-    "subtitle":"The last 7 days. Source: CoinAPI",
+    "subtitle":"BTC hourly, the last 7 days. Source: CoinAPI",
     "subtitleFontSize":10,
     "subtitleFontStyle": "italic",
     "anchor": "start",
@@ -13,7 +13,7 @@
     "subtitleColor":"black"},
 
   "config": {
-    "background":"#ffffff",
+    "background": "aliceblue",
     "view": {
       "stroke": "transparent"}},
  
@@ -34,10 +34,8 @@
     "format": {"type": "json"}},
   
 
-
-
-  "height": 300,
-  "width": 400,
+    "width": 399,
+    "height": 320,
 
   "mark": {
     "type": "area",
@@ -57,7 +55,7 @@
     "y": {
       "field": "priceh",
       "type": "quantitative",
-      "scale":{"domain": [16000,17200]},
+      "scale":{"domain": [16000,17400]},
       "title": "",
       "axis": {
         "format":"$,.5",

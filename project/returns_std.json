@@ -1,41 +1,32 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-    "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/returns_std2.csv"
-  
+    "data": {
+      "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/returns_std2.csv"
     },
-  
-        "title": {
-        "text": "Returns and Standard Deviation",
-        "subtitle": "In the last 2 years. Source: yfinance",
-        "anchor": "start",
-        "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10},
-  
-      "width": 400,
-      "height": 300,
-  
-
-    "mark":{"type": "bar", "size": 16},
-
+    "title": {
+      "text": "Returns and Standard Deviation",
+      "subtitle": "In the last 2 years. Source: yfinance",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10
+    },
+    "background": "aliceblue",
+    "width": 400,
+    "height": 250,
+    "mark": {"type": "bar", "size": 16},
     "encoding": {
-      "x": {
-        "field": "token",
-        "title":null
-        },
-          "color": {
-            "field": "variable", 
-            "scale": {"range": ["teal", "#8B0000"]},
-            "legend": {"orient": "top-right", "title": null}
-            },
-  
-  
+      "x": {"field": "token", "title": null, "axis":{"labelAngle": 0}},
+      "color": {
+        "field": "variable",
+        "scale": {"range": ["teal", "#8B0000"]},
+        "legend": {"orient": "top-right", "title": null}
+      },
       "y": {
-        "field": "value", 
+        "field": "value",
         "type": "quantitative",
-        "axis":{"grid": false},
-        "title":null
+        "axis": {"grid": false},
+        "title": null
       },
       "xOffset": {"field": "variable"}
-  }
+    }
   }

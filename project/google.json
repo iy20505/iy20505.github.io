@@ -1,0 +1,71 @@
+{
+    "data": {
+      "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/google_trends2.csv"
+    },
+    "width": 550,
+    "height": 275,
+    "background": "aliceblue",
+    "title": {
+      "text": "Searches for 'crypto' ",
+      "subtitle": "Google trend interest from 0 to 100. Source: google",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "transform": [
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 2012,
+        "bind": {
+          "input": "range",
+          "min": 2007,
+          "max": 2023,
+          "step": 1,
+          "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2022,
+        "bind": {
+          "input": "range",
+          "min": 2007,
+          "max": 2023,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+    "layer": [
+      {
+        "mark": {"type":"line", "color": "darkblue", "size": 1.5},
+        "encoding": {
+          "x": {
+            "title": null,
+            "field": "date",
+            "type": "temporal",
+            "axis": {"grid": false}
+          },
+          "y": {
+            "title": null,
+            "field": "interest",
+            "type": "quantitative",
+            "axis": {"grid": false}
+          }
+        }
+      },
+      {
+        "mark": {"type": "rule", "color": "red", "size": 1},
+        "encoding": {"x": {"field": "date", "type": "temporal"}},
+        "data": {
+          "values": [{"date": "5 Jan 2021 14:15:00"}],
+          "format": {"parse": {"date": "utc:'%d %b %Y %H:%M:%S'"}}
+        }
+      }
+    ]
+  }

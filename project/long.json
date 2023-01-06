@@ -10,6 +10,7 @@
       "anchor": "start",
       "color": "black"
     },
+    "background": "aliceblue",
     "data": {
       "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/btc_candle3.csv"
     },

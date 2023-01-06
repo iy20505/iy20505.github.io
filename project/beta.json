@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/betas.csv"
+  },
+  "title": {
+    "text": "Crypto beta - risk",
+    "subtitle": " For the top ten, last 2 years. Source: yfinance",
+    "anchor": "start",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10
+  },
+  "background": "aliceblue",
+  "width": 375,
+  "height": 250,
+  "mark": {"type": "bar", "size": 22},
+  "encoding": {
+    "x": {
+      "field": "token",
+      "type": "nominal",
+      "axis": {"labelAngle": 0},
+      "title": null
+    },
+    "y": {
+      "field": "beta",
+      "type": "quantitative",
+      "scale": {"domain": [0, 1.5]},
+      "axis": {"grid": true, "title": null, "minExtent": 1}
+    },
+    "color": {
+      "field": "beta",
+      "type": "quantitative",
+      "scale": {"range": ["darkblue", "#8B0000"], "domain": [1, 1.28, 1.4]}
+    },
+    "XYZcolor:selected": {
+      "field": "beta",
+      "type": "quantitative",
+      "scale": {"range": ["#ab0749", "#414487"], "domain": [0, 1.2, 100]},
+      "selected": {"not": {"selection": "brush"}}
+    }
+  }
+}

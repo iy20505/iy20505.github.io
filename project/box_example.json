@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "data": {"url": "https://raw.githubusercontent.com/RDeconomist/teaching2/main/mpFrameworks.csv"},
+  
+    "description": "Inflation UK",
+  
+    "title": {
+      "text": "Monetary frameworks, 1974-2017",
+      "subtitle":"Target variables, 25 advanced economies. Source: monetaryframeworks.org and my calcs.",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "width": 550, "height": 350,
+      
+    "mark": "area",
+    
+    "encoding": {
+      "x": {
+        "timeUnit": "year", 
+        "field": "Year",
+        "axis": {"format": "%Y"},
+        "title":null
+      },
+  
+      "y": {
+        "field": "Share", 
+        "type": "quantitative",
+        "axis": {"format": ".0%"},
+        "title":null
+      },
+  
+      "color": {
+        "field": "Series",
+        "scale": {"range": ["#179fdb", "#eb5c2e", "#0063af", "#122b39", "lightgrey"]},
+        "title":"Target"
+      },
+      
+      "tooltip":[
+        {"timeUnit": "year", "field": "Year", "title":"Year"},
+        {"field": "Series","type": "nominal","title":"Target"},
+        {"field": "Value","type": "quantitative","format": ".0f","title":"# Countries"},
+        {"field": "Share","type": "quantitative","format": ".0%","title":"Share"}
+      ]
+    
+    }
+  }
+  

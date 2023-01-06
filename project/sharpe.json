@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/returns_std3.csv"
+  },
+  "title": {
+    "text": "Sharpe ratio - returns",
+    "subtitle": " For the top ten, last 2 years. Source: yfinance",
+    "anchor": "start",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10
+  },
+  "width": 425,
+  "height": 250,
+  "background": "aliceblue",
+  "mark": {"type": "bar", "size": 25, "color": "darkblue"},
+  "encoding": {
+    "x": {
+      "field": "token",
+      "type": "nominal",
+      "axis": {"labelAngle": 0},
+      "title": null
+    },
+    "y": {
+      "field": "Sharpe",
+      "type": "quantitative",
+      "axis": {"title": null}
+    }
+  }
+}

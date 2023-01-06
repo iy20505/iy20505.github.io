@@ -1,0 +1,74 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "A hourly price chart for ETH using coinapi.io.",
+  
+     "title": {
+      "text": "Ethereum: Live Price",
+      "subtitle":"ETH hourly, the last 7 days. Source: CoinAPI",
+      "subtitleFontSize":10,
+      "subtitleFontStyle": "italic",
+      "anchor": "start",
+      "color": "black",
+      "subtitleColor":"black"},
+  
+    "config": {
+      "background": "aliceblue",
+      "view": {
+        "stroke": "transparent"}},
+   
+     "transform": [
+        
+          {"calculate": "datum.price_close", "as": "price"},
+          {"calculate": "datum.price_high", "as": "priceh"},
+          {"calculate": "datum.price_low", "as": "pricel"}
+          
+      
+    ],
+    
+    "data": {
+      "url": "https://rest.coinapi.io/v1/ohlcv/COINBASE_SPOT_ETH_USD/latest?apikey=05A26C84-F9C4-4593-861D-CBCF4A30BA4F&period_id=1HRS&limit=168",
+      "format": {"type": "json"}},
+    
+  
+  
+  
+      "width": 399,
+      "height": 320,
+  
+    "mark": {
+      "type": "area",
+      "interpolate": "monotone",
+      "color":"#c61159"
+    },
+  
+    "encoding": {
+  
+      "x": {
+        "field": "time_close",
+        "type": "temporal",
+        "title": null,
+        "axis": {
+          "grid": false}},
+  
+      "y": {
+        "field": "priceh",
+        "type": "quantitative",
+        "scale":{"domain": [1150,1340]},
+        "title": "",
+        "axis": {
+          "format":"$,.5",
+          "grid": false}
+          },
+  
+      "y2": {
+        "field": "pricel",
+        "type": "quantitative",
+        "title": null
+      },
+  
+      "tooltip": [
+        {"field": "time_close", "type": "temporal", "title": "Date"},
+        {"field": "price", "type": "quantitative", "title": "Close Price", "format":"$,.5"}]
+  
+  }}

@@ -7,9 +7,10 @@
       "anchor": "start",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10},
+      "background": "aliceblue",
   
-    "width": 391,
-    "height": 290,
+    "width": 401,
+    "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week9/btc_eth2.csv"
   },

@@ -8,7 +8,7 @@
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10},
 
-    "width": 415,
+    "width": 424,
     "height": 320,
 
   "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/testing2.csv"},
@@ -27,7 +27,7 @@
   ],
 
 
-
+  "background": "aliceblue",
   "repeat": {"layer": ["BTC", "ETH", "SHIB", "SOL", "ADA", "BNB", "DOGE", "DOT", "XRP", "MATIC"]},
 
   "spec":{
@@ -52,7 +52,7 @@
         "datum": {"repeat": "layer"},
         "scale": {"range": ["darkorange", "darkblue", "lightgreen", "purple", "gray", "black", "pink", "royalblue", "green", "lightblue"]},
         "legend": {"orient": "top-right",
-          "fillColor": "white"}}
+          "fillColor": "aliceblue"}}
         }
       }
       }

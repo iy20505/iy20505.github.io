@@ -8,8 +8,9 @@
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10},
 
-    "width": 415,
+    "width": 390,
     "height": 320,
+    "background": "aliceblue",
 
   "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week9/10cryptos.csv"},
 
