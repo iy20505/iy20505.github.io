@@ -1,22 +1,86 @@
 {
+
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 "title": {
     "text": "BTC vs ETH",
-    "subtitle": "Correlation between Bitcoin and Ethereum for the last 3 years. Source: yfinance",
+    "subtitle": "Correlation between Bitcoin and Ethereum for the last 3 years ($1000s). Source: yfinance",
     "anchor": "start",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10},
+    "background": "aliceblue",
 
-  "width": 391,
-  "height": 290,
+  "width": 408,
+  "height": 300,
+"data": {
+  "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week9/btc_eth2.csv"
+},
+
+"transform": [
+  {"calculate": "datum.BTC/1000", "as": "BTC"},
+      {"calculate": "datum.ETH/1000", "as": "ETH"}],
 
 
-  "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week9/btc_eth2.csv"},
-  "mark": {"type": "circle", "color": "hotpink", "fillOpacity": 0.4, "size": 40},
-  "encoding": {
-    "x": {"field": "BTC", "type": "quantitative",
-      "axis": {"format": "$,.5", "grid": false}},
-    "y": {"field": "ETH", "type": "quantitative",
-    "axis": {"format": "$,.5", "grid": false}}
+"layer": [
+  {
+  "mark": {"type": "circle", "color": "#040c82", "fillOpacity": 0.3, "size": 40
+    },
+    "encoding": {
+      "x": {
+        "field": "BTC",
+        "type": "quantitative",
+        "axis":{"grid": false}
+      },
+      "y": {
+        "field": "ETH",
+        "type": "quantitative",
+        "axis":{"grid": false}
+      }
+    }
+  },
+  {
+    "mark": {
+      "type": "line",
+      "size": 1,
+      "color": "firebrick"
+    },
+    "transform": [
+      {
+        "regression": "BTC",
+        "on": "ETH"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "BTC",
+        "type": "quantitative"
+
+      },
+      "y": {
+        "field": "ETH",
+        "type": "quantitative"
+
+      }
+    }
+  },
+  {
+    "transform": [
+      {
+        "regression": "BTC",
+        "on": "ETH",
+        "params": true
+      },
+      {"calculate": "'R²: '+format(datum.rSquared*1.05, '.2f')", "as": "R2"}
+    ],
+    "mark": {
+      "type": "text",
+      "color": "firebrick",
+      "x": "width",
+      "align": "right",
+      "y": -5
+    },
+    "encoding": {
+      "text": {"type": "nominal", "field": "R2"}
+    }
   }
+]
 }

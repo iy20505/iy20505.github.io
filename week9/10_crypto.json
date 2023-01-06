@@ -8,8 +8,9 @@
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10},
 
-    "width": 416,
-    "height": 304,
+    "width": 417,
+    "height": 321,
+    "background": "aliceblue",
 
   "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/week9/10cryptos.csv"},
 
@@ -26,7 +27,7 @@
     {"calculate": "datum.MATIC/1.894047022*100", "as": "MATIC"}
   ],
 
-  "repeat": {"layer": ["BTC", "ETH", "SHIB", "SOL", "ADA", "BNB", "DOGE", "DOT", "XRP"]},
+  "repeat": {"layer": ["BTC", "ETH", "SHIB", "SOL", "ADA", "BNB", "DOGE", "DOT", "XRP", "MATIC"]},
 
   "spec":{
     "mark": {"type": "line", "strokeWidth": 0.7},
@@ -45,7 +46,7 @@
         "field": {"repeat": "layer"},
         "type": "quantitative",
         "title": null,
-        "scale":{"domain": [0,110]},
+        "scale":{"domain": [0,153]},
         "axis": {"grid":false}},
 
       "color": {
@@ -53,7 +54,7 @@
         "scale": {"range": ["darkorange", "darkblue", "lightgreen", "purple", "gray", "black", "pink", "royalblue", "green", "lightblue"]},
         "legend": {
           "orient": "top-right",
-          "fillColor": "white"}}
+          "fillColor": "aliceblue"}}
         }
       }
       }
