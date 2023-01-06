@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A simple bar chart with embedded data.",
   "data": {
-  "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/returns_std3.csv"
+    "url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/project/returns_std3.csv"
   },
   "title": {
     "text": "Treynor ratio - returns",
@@ -28,6 +28,18 @@
       "scale": {"domain": [0, 40]},
       "axis": {"grid": true, "title": null, "minExtent": 1}
     },
+
+    "tooltip": [
+
+      {"field": "token", "type": "nominal", "title": "Crypto"},
+      {
+        "field": "Treynor",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Treynor"
+      }
+    ],
+
     "color": {
       "field": "Treynor",
       "type": "quantitative",
