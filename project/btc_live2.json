@@ -55,7 +55,7 @@
     "y": {
       "field": "priceh",
       "type": "quantitative",
-      "scale":{"domain": [16000,17400]},
+      "scale":{"domain": [16400,17800]},
       "title": "",
       "axis": {
         "format":"$,.5",
