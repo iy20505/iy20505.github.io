@@ -47,14 +47,17 @@
       "x": {
         "field": "time_close",
         "type": "temporal",
+        "timeUnit": "monthdatehours",
         "title": null,
         "axis": {
-          "grid": false}},
+          "tickCount": "day",
+          "grid": false}
+      },
   
       "y": {
         "field": "priceh",
         "type": "quantitative",
-        "scale":{"domain": [1200,1400]},
+        "scale":{"domain": [1220,1500]},
         "title": "",
         "axis": {
           "format":"$,.5",
