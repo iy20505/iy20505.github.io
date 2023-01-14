@@ -33,7 +33,7 @@
   
   
   
-      "width": 399,
+      "width": 396,
       "height": 320,
   
     "mark": {
@@ -57,7 +57,7 @@
       "y": {
         "field": "priceh",
         "type": "quantitative",
-        "scale":{"domain": [1220,1500]},
+        "scale":{"domain": [1220,1700]},
         "title": "",
         "axis": {
           "format":"$,.5",

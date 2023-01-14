@@ -34,7 +34,7 @@
     "format": {"type": "json"}},
   
 
-    "width": 399,
+    "width": 397,
     "height": 320,
 
   "mark": {
@@ -58,7 +58,7 @@
     "y": {
       "field": "priceh",
       "type": "quantitative",
-      "scale":{"domain": [16500,20000]},
+      "scale":{"domain": [16500,22000]},
       "title": "",
       "axis": {
         "format":"$,.5",
