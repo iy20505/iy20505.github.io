@@ -47,10 +47,9 @@
       "x": {
         "field": "time_close",
         "type": "temporal",
-        "timeUnit": "monthdatehours",
         "title": null,
         "axis": {
-          "tickCount": "day",
+          "format": "%b %d",
           "grid": false}
       },
   
