@@ -1,0 +1,62 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "BRICS+ vs G7: The Changing World Order",
+
+    "title": {
+      "fontSize": 13,
+      "text": "The Changing World Order: BRICS+ vs G7",
+      "subtitle": "Share of World GDP (%). Source: IMF World Outlook Database",
+      "anchor": "start",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10
+      },
+
+    "width": 415,
+    "height": 304,
+
+  "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/BricsPlus_g7.csv"},
+
+  "background": "aliceblue",
+
+  "repeat": {
+    "layer": ["G7", "BRICS+"]
+    },
+
+  "spec":{
+    "mark": {"type": "line"
+      },
+
+    "encoding": {
+
+      "x": {
+        "field": "Year",
+        "type": "temporal", 
+        "title": null,
+        "axis": {
+          "tickCount": 6,
+          "grid": false}
+          },
+
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": null,
+        "axis":{"grid": false}
+        },
+
+        "strokeDash": {
+          "field": "predicted", 
+          "type": "nominal"
+          },
+
+      "color": {
+        "datum": {"repeat": "layer"},
+        "scale": {"range": ["darkblue", "red"]},
+        "legend": {
+          "orient": "top-right",
+          
+          "fillColor": "aliceblue"}}
+        }
+      }
+      }
