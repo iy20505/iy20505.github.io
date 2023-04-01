@@ -5,7 +5,7 @@
 
     "title": {
       "fontSize": 13,
-      "text": "The Changing World Order: BRICS+ vs G7",
+      "text": "BRICS+ vs G7",
       "subtitle": "Share of World GDP (%). Source: IMF World Outlook Database",
       "anchor": "start",
       "subtitleFontStyle": "italic",
@@ -17,7 +17,7 @@
 
   "data": {"url": "https://raw.githubusercontent.com/iy20505/iy20505.github.io/main/BricsPlus_g7.csv"},
 
-  "background": "aliceblue",
+  "background": "ghostwhite",
 
   "repeat": {
     "layer": ["G7", "BRICS+"]
@@ -52,11 +52,11 @@
 
       "color": {
         "datum": {"repeat": "layer"},
-        "scale": {"range": ["darkblue", "red"]},
+        "scale": {"range": ["darkblue", "orangered"]},
         "legend": {
           "orient": "top-right",
           
-          "fillColor": "aliceblue"}}
+          "fillColor": "ghostwhite"}}
         }
       }
       }
